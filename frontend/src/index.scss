@@ -1,0 +1,26 @@
+$color-primary-main: #020402;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-style: "Saira", sans-serif;
+}
+
+body {
+  font-weight: 400;
+  color: $color-primary-main;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+    color: $color-primary-main;
+  }
+}

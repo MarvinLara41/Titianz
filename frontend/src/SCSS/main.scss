@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .header-title {
+    font-size: 7rem;
+    opacity: 0.4;
+  }
+
+  .header-links {
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin-right: 1.5rem;
+      }
+      li:hover {
+        -webkit-transform: scale(1.4);
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+
+  .main-login {
+    .main-welcome {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .main-login_form {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .main-register {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row-reverse;
+
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+}
