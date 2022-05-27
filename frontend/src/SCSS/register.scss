@@ -1,0 +1,16 @@
+.register {
+  .register-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    label {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+}

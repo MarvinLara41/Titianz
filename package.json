@@ -1,0 +1,38 @@
+{
+  "name": "Titianz",
+  "version": "1.0.0",
+  "proxy": "http://127.0.0.1:8050",
+  "type": "module",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.2.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd backend && node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
+    "client": "cd frontend && npm run start",
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarvinLara41/Titianz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarvinLara41/Titianz/issues"
+  },
+  "homepage": "https://github.com/MarvinLara41/Titianz#readme"
+}
