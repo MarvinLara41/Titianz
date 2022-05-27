@@ -17,12 +17,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "cd backend && node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
-    "client": "cd frontend && npm run start",
-    "install": "cd frontend && npm install",
-    "build": "cd frontend && npm run build"
+    "frontend": "cd frontend && npm start",
+    "backend": "nodemon server.js",
+    "dev": "concurrently \"node server.js\" \"npm run frontend\"",
+    "start": "node server.js && cd frontend && npm start",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
