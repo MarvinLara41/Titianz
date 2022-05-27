@@ -1,52 +1,44 @@
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import AboutScreen from "./screens/AboutScreen";
+import HomeScreen from "./screens/HomeScreen";
+import LandingScreen from "./screens/LandingScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import WorkOutLog from "./screens/WorkOutLogScreen";
+
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <header className="header">
         <div className="header-title">
           <h2>
-            <a href="/">Titianz</a>
+            <Link to="/">Titianz</Link>
           </h2>
         </div>
 
         <div className="header-links">
           <ul>
             <li>
-              <a href="/">Login</a>
+              <Link to="/">Login</Link>
             </li>
             <li>
-              <a href="/findplan">Workouts</a>
+              <Link to="/workoutlog">Workouts</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>
       </header>
       <main className="main">
-        <div className="main-login">
-          <div className="main-welcome">
-            <p> Welcome Titianz </p>
-          </div>
-
-          <form className="main-login_form">
-            <label htmlFor="username">UserName</label>
-            <input text="text" required />
-            <label htmlFor="password">Password</label>
-            <input type="password" text="text" required />
-            <br />
-            <button>Submit</button>
-          </form>
-
-          <div className="main-register">
-            <p>
-              Don't have an account?
-              <br />
-              <a href="/register">Register Here</a>
-            </p>
-          </div>
-        </div>
+        <Routes>
+          <Route path="/" element={<LandingScreen />} />
+          <Route path="/dashboard" element={<HomeScreen />} />
+          <Route path="/workoutlog" element={<WorkOutLog />} />
+          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/about" element={<AboutScreen />} />
+        </Routes>
       </main>
-    </div>
+    </BrowserRouter>
   );
 }
 

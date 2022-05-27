@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 /** SCSS */
 import "./index.scss";
 import "./SCSS/main.scss";
+import "./SCSS/register.scss";
 
 import App from "./App";
 
